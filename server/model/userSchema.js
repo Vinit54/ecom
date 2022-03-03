@@ -4,21 +4,21 @@ const userSchema = new mongoose.Schema({
     firstname: {
         type: String,
         required: true,
-        trim: true,
-        min: 5,
+        trim: true, /*** white spaces removed from both sides */
+        min: 3,
         max: 20
     },
     lastname: {
         type: String,
         required: true,
-        trim: true,
-        min: 5,
+        trim: true, /*** white spaces removed from both sides */
+        min: 3,
         max: 20
     },
     username: {
         type: String,
         required: true,
-        trim: true,
+        trim: true, /*** white spaces removed from both sides */
         unique: true,
         index: true,
         lowercase: true
@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        trim: true,
+        trim: true,  /*** white spaces removed from both sides */
         unique: true,
         lowercase: true
     },
